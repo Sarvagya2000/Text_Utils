@@ -1,7 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
+//import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 export default function Navbar(props) {
+  
+  // const navigate = useNavigate()
+  // const onClickAbout =()=>{
+  //   navigate('/About')
+  // }
+
   return (
     <nav
       className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
@@ -28,10 +37,15 @@ export default function Navbar(props) {
                 Home
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/">
+            {/* <li className="nav-item" onClick={onClickAbout}>
+              <a className="nav-link" >
                 About
               </a>
+            </li> */}
+            <li className="nav-item">
+              <Link to='/About' className="nav-link" >
+                About
+              </Link >
             </li>
             <li className="nav-item dropdown">
               <a
